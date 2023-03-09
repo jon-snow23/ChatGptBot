@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="?attr/fullscreenBackgroundColor"
+    android:theme="@style/ThemeOverlay.Bot.FullscreenContainer">
+    
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/recycler_view"
+        android:layout_above="@id/bottom_layout"
+        />
+    
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="5dp"
+        android:hint="Enter your Question"
+        android:padding="5dp"
+        android:textColorHint="@color/black"
+        app:hintTextColor="@color/black">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_corner"
+            android:id="@+id/message_edit_text"
+            android:drawableEnd="@drawable/ic_send"
+            android:drawableTint="#0087EF"
+            android:ems="10"
+            android:imeOptions="actionSend"
+            android:importantForAutofill="no"
+            android:inputType="text"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:textSize="14sp"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+</RelativeLayout>
